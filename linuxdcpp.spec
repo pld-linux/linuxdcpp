@@ -10,6 +10,7 @@ License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	%{name}-%{snap}.tar.gz
 # Source0-md5:	3a6d0774504d1121dde539dad8bb82d6
+Source1:	%{name}.desktop
 URL:		http://linuxdcpp.berlios.de/
 BuildRequires:	bzip2-devel
 BuildRequires:	freetype-devel
@@ -36,6 +37,9 @@ scons \
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_desktopdir}
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 export CXXFLAGS="%{rpmcflags}"
 scons install \
@@ -49,3 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changelog.txt Credits.txt Readme.txt
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/*
+%{_desktopdir}/*
