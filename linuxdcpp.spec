@@ -14,8 +14,9 @@ Source1:	%{name}.desktop
 URL:		http://linuxdcpp.berlios.de/
 BuildRequires:	bzip2-devel
 BuildRequires:	freetype-devel
-BuildRequires:	glib-devel
-BuildRequires:	libglade2-devel
+BuildRequires:	glib2-devel >= 1:2.4
+BuildRequires:	gtk+2-devel >= 2:2.6
+BuildRequires:	libglade2-devel >= 1:2.4
 BuildRequires:	pkgconfig
 BuildRequires:	scons
 BuildRequires:	zlib-devel
@@ -52,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changelog.txt Credits.txt Readme.txt
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/*
+%{_datadir}/linuxdcpp
 %{_desktopdir}/*
