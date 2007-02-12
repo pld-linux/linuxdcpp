@@ -2,7 +2,7 @@
 %define		snap	061114
 
 Summary:	Linux DC++ client port
-Summary(pl):	Linuksowy port klienta DC++
+Summary(pl.UTF-8):   Linuksowy port klienta DC++
 Name:		linuxdcpp
 Version:	0.%{snap}
 Release:	1
@@ -25,7 +25,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Linux port of the DC++ Direct Connect client.
 
-%description -l pl
+%description -l pl.UTF-8
 Linuksowy port klienta Direct Connect DC++.
 
 %prep
