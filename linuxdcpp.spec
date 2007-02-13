@@ -2,7 +2,7 @@
 %define		snap	061114
 
 Summary:	Linux DC++ client port
-Summary(pl.UTF-8):   Linuksowy port klienta DC++
+Summary(pl.UTF-8):	Linuksowy port klienta DC++
 Name:		linuxdcpp
 Version:	0.%{snap}
 Release:	1
