@@ -1,22 +1,25 @@
 
-%define		snap	061114
+%define		snap	070531
 
 Summary:	Linux DC++ client port
 Summary(pl.UTF-8):	Linuksowy port klienta DC++
 Name:		linuxdcpp
 Version:	0.%{snap}
-Release:	1
+Release:	0.1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	%{name}-%{snap}.tar.gz
-# Source0-md5:	3a6d0774504d1121dde539dad8bb82d6
+# Source0-md5:	961068c21ba4f2b82409188d8ddeeadf
 Source1:	%{name}.desktop
 URL:		http://linuxdcpp.berlios.de/
 BuildRequires:	bzip2-devel
 BuildRequires:	freetype-devel
+BuildRequires:	gcc-c++
 BuildRequires:	glib2-devel >= 1:2.4
 BuildRequires:	gtk+2-devel >= 2:2.6
 BuildRequires:	libglade2-devel >= 1:2.4
+BuildRequires:	libstdc++-devel
+BuildRequires:	openssl-devel
 BuildRequires:	pkgconfig
 BuildRequires:	scons
 BuildRequires:	zlib-devel
