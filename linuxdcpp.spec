@@ -14,7 +14,6 @@ Source1:	%{name}.desktop
 URL:		http://linuxdcpp.berlios.de/
 BuildRequires:	bzip2-devel
 BuildRequires:	freetype-devel
-BuildRequires:	gcc-c++
 BuildRequires:	glib2-devel >= 1:2.4
 BuildRequires:	gtk+2-devel >= 2:2.6
 BuildRequires:	libglade2-devel >= 1:2.4
