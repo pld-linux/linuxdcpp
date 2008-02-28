@@ -6,8 +6,8 @@ Version:	1.0.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
-Source0:	http://prdownload.berlios.de/linuxdcpp/%{name}-%{version}.tar.bz2
-# Source0-md5:	817bf896847461c75024b239d8f66801
+Source0:	http://download.berlios.de/linuxdcpp/%{name}-%{version}.tar.bz2
+# Source0-md5:	5ead00a1c4d07958c784b2f365b7c395
 Source1:	%{name}.desktop
 URL:		http://linuxdcpp.berlios.de/
 BuildRequires:	bzip2-devel
