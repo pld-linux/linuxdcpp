@@ -2,14 +2,14 @@
 Summary:	Linux DC++ client port
 Summary(pl.UTF-8):	Linuksowy port klienta DC++
 Name:		linuxdcpp
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
-Source0:	http://download.berlios.de/linuxdcpp/%{name}-%{version}.tar.bz2
-# Source0-md5:	5ead00a1c4d07958c784b2f365b7c395
+Source0:	http://launchpad.net/linuxdcpp/1.0/%{version}/+download/%{name}-%{version}.tar.bz2
+# Source0-md5:	905d572357cbdbc66c8d45fe394f80fc
 Source1:	%{name}.desktop
-URL:		http://linuxdcpp.berlios.de/
+URL:		https://launchpad.net/linuxdcpp/
 BuildRequires:	bzip2-devel
 BuildRequires:	freetype-devel
 BuildRequires:	glib2-devel >= 1:2.4
@@ -46,6 +46,8 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 export CXXFLAGS="%{rpmcflags}"
 scons install \
 	FAKE_ROOT=$RPM_BUILD_ROOT
+
+rm -rf $RPM_BUILD_ROOT/%{_docdir}/linuxdcpp/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
