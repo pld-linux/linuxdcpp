@@ -1,4 +1,3 @@
-
 Summary:	Linux DC++ client port
 Summary(pl.UTF-8):	Linuksowy port klienta DC++
 Name:		linuxdcpp
@@ -47,7 +46,7 @@ export CXXFLAGS="%{rpmcflags}"
 scons install \
 	FAKE_ROOT=$RPM_BUILD_ROOT
 
-rm -rf $RPM_BUILD_ROOT/%{_docdir}/linuxdcpp/
+rm -rf $RPM_BUILD_ROOT%{_docdir}/linuxdcpp
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -57,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changelog.txt Credits.txt Readme.txt
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/linuxdcpp
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
