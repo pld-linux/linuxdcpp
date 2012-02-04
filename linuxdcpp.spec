@@ -1,23 +1,25 @@
 Summary:	Linux DC++ client port
 Summary(pl.UTF-8):	Linuksowy port klienta DC++
 Name:		linuxdcpp
-Version:	1.0.3
-Release:	3
+Version:	1.1.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
-Source0:	http://launchpad.net/linuxdcpp/1.0/%{version}/+download/%{name}-%{version}.tar.bz2
-# Source0-md5:	a427b87fa576d8674640f0a7f6ad5e66
+Source0:	http://launchpad.net/linuxdcpp/1.1/%{version}/+download/%{name}-%{version}.tar.bz2
+# Source0-md5:	037de708bdb1e5dd7ac6c359b0e2c1a0
 Source1:	%{name}.desktop
 URL:		https://launchpad.net/linuxdcpp/
+BuildRequires:	boost-devel
 BuildRequires:	bzip2-devel
-BuildRequires:	freetype-devel
 BuildRequires:	glib2-devel >= 1:2.4
-BuildRequires:	gtk+2-devel >= 2:2.6
+BuildRequires:	gtk+2-devel >= 2:2.12
 BuildRequires:	libglade2-devel >= 1:2.4
-BuildRequires:	libstdc++-devel
+BuildRequires:	libnotify >= 0.4.1
+BuildRequires:	libstdc++-devel >= 4.1
 BuildRequires:	openssl-devel
 BuildRequires:	pkgconfig
-BuildRequires:	scons >= 0.96
+BuildRequires:	scons >= 0.98.1
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	zlib-devel
 Suggests:	xdg-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
