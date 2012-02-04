@@ -40,7 +40,7 @@ scons \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_desktopdir}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir},%{_mandir}/man1}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
@@ -48,14 +48,23 @@ export CXXFLAGS="%{rpmcflags}"
 scons install \
 	FAKE_ROOT=$RPM_BUILD_ROOT
 
+install data/%{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install icons/%{name}.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
+
 rm -rf $RPM_BUILD_ROOT%{_docdir}/linuxdcpp
+
+%find_lang %{name} --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc Changelog.txt Credits.txt Readme.txt
-%attr(755,root,root) %{_bindir}/*
-%{_datadir}/linuxdcpp
-%{_desktopdir}/*.desktop
+%doc Changelog.txt Credits.txt Readme.txt data/magnet.protocol
+%attr(755,root,root) %{_bindir}/%{name}
+%{_datadir}/%{name}
+%{_desktopdir}/%{name}.desktop
+%{_iconsdir}/hicolor/*x*/apps/%{name}.png
+%{_iconsdir}/hicolor/scalable/apps/%{name}.svg
+%{_pixmapsdir}/%{name}.xpm
+%{_mandir}/man1/%{name}.1*
