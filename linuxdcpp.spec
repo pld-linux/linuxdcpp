@@ -2,7 +2,7 @@ Summary:	Linux DC++ client port
 Summary(pl.UTF-8):	Linuksowy port klienta DC++
 Name:		linuxdcpp
 Version:	1.1.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://launchpad.net/linuxdcpp/1.1/%{version}/+download/%{name}-%{version}.tar.bz2
